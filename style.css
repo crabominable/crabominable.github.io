@@ -15,6 +15,8 @@
 #header {
     align-items: center;
     background-color: rgb(250, 250, 250);
+    border-bottom: 2px solid rgba(196, 196, 196, 0.6);
+    box-shadow: 0px 2px 4px rgba(184, 184, 184, 0.2);
     display: flex;
     height: 3em;
     margin: auto;
@@ -27,23 +29,72 @@
     z-index: 1;
 }
 
+#header-mobile {
+    background-color: rgba(93, 214, 214, 0.5);
+    border-bottom: 2px solid rgba(33, 171, 206, 0.6);
+    border-right: 2px solid rgba(33, 171, 206, 0.6);
+    border-radius: 0px 0px 4px 0px;
+    display: none;
+    height: 14em;
+    position: absolute;
+    width: 8em;
+    top: 0%;
+    left: 0%;
+}
+
+#nav-menu-mobile {
+    align-items: flex-start;
+    color: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    padding: 8px;
+    height: 90%;
+}
+
+#nav-menu-mobile li {
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+}
+
+#nav-menu-mobile a {
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    transition: 0.2s;
+}
+
+#menu-bars {
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    width: 60px;
+}
+
+#menu-bars-header {
+    position: relative;
+    left: -10%;
+    width: 60px;
+}
+
 .header-content {
     align-items: center;
     display: flex;
     font-family: 'Poppins', sans-serif;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto;
-    width: 55%;
+    width: 70em;
 }
 
 #header p {
     font-size: 16px;
     font-weight: 500;
-}
-
-#header img {
-    height: 32px;
-    width: 32px;
 }
 
 #nav-menu {
@@ -54,13 +105,24 @@
 
 #nav-menu li {
     cursor: pointer;
+    color: rgb(32, 32, 32);
     font-size: 15px;
     font-weight: 500;
     list-style: none;
 }
 
-#nav-menu li:hover {
+#nav-menu a {
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    font-size: 15px;
+    font-weight: 500;
+    list-style: none;
+    transition: 0.2s;
+}
+
+#nav-menu a:hover {
     color: rgb(164, 216, 216);
+    transition: 0.2s;
 }
 
 .buttons-nav {
@@ -114,7 +176,6 @@
 .code-atoms-explications {
     align-items: center;
     background-color: rgba(50, 230, 240, 0.1);
-    border: black;
     border-radius: 12px;
     display: flex;
     flex-flow: column;
@@ -154,7 +215,7 @@
     justify-content: space-between;
     margin: auto;
     margin-top: 12em;
-    width: 60%;
+    width: 70em;
 }
 
 #home-section-content {
@@ -222,6 +283,7 @@
     font-weight: 500;
     padding: 18px 34px 18px 34px;
     transition: 0.2s;
+    margin-top: 10px;
 }
 
 .button-function:hover {
@@ -240,6 +302,8 @@
     color: rgb(93, 214, 214);
     cursor: pointer;
     text-decoration: none;
+    margin: 0 6px;
+    margin-top: 10px;
 }
 
 .anchor-item:hover {
@@ -273,7 +337,7 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    height: 36em;
+    height: auto;
     justify-content: space-around;
     margin: auto;
     margin-bottom: 6em;
@@ -298,6 +362,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 12px;
+    text-align: center;
 }
 
 #abilities-section-cards-content {
@@ -306,7 +371,7 @@
     flex-flow: row nowrap;
     height: 80%;
     justify-content: space-evenly;
-    margin-top: 4em;
+    margin-top: 6em;
     opacity: 0;
     width: 100%;
 }
@@ -315,26 +380,27 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    height: 24em;
+    height: 34em;
     justify-content: space-between;
     margin: 2em;
-    width: 20%;
+    width: 35%;
 }
 
 .abilities-section-card-design {
     align-items: center;
     display: flex;
     flex-flow: column;
-    height: 24.2em;
+    height: 30.2em;
     justify-content: space-between;
     margin: 2em;
-    width: 20%;
+    width: 35%;
 }
 
 .abilities-section-card-design h3 {
     color: rgb(80, 80, 80);
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    text-align: center;
 }
 
 .abilities-section-card h3 {
@@ -348,8 +414,8 @@
     background-size: 100% 80%;
     background-repeat: no-repeat;
     border-radius: 8px;
-    height: 30%;
-    width: 95%;
+    height: 9em;
+    width: 14em;
 }
 
 .abilities-section-card-thumb-back {
@@ -357,8 +423,8 @@
     background-size: 100% 80%;
     background-repeat: no-repeat;
     border-radius: 8px;
-    height: 30%;
-    width: 68%;
+    height: 9em;
+    width: 14em;
 }
 
 .abilities-section-card-thumb-design {
@@ -375,7 +441,7 @@
     display: flex;
     flex-flow: column nowrap;
     margin: 6px;
-    width: 95%;
+    width: 70%;
 }
 
 .abilities-section-card-graphic {
@@ -439,14 +505,28 @@
     background-color: rgba(93, 214, 214, 0.8);
     border-radius: 2px;
     height: 4px;
-    width: 40%;
+    width: 30%;
 }
 
 .abilities-section-card-graphic-bar-node {
     background-color: rgba(93, 214, 214, 0.8);
     border-radius: 2px;
     height: 4px;
-    width: 50%;
+    width: 70%;
+}
+
+.abilities-section-card-graphic-bar-express {
+    background-color: rgba(93, 214, 214, 0.8);
+    border-radius: 2px;
+    height: 4px;
+    width: 80%;
+}
+
+.abilities-section-card-graphic-bar-restapi {
+    background-color: rgba(93, 214, 214, 0.8);
+    border-radius: 2px;
+    height: 4px;
+    width: 80%;
 }
 
 .abilities-section-card-graphic-bar-sql {
@@ -456,25 +536,25 @@
     width: 70%;
 }
 
-.abilities-section-card-graphic-bar-nosql {
+.abilities-section-card-graphic-bar-mysql {
     background-color: rgba(93, 214, 214, 0.8);
     border-radius: 2px;
     height: 4px;
-    width: 30%;
+    width: 70%;
 }
 
 .abilities-section-card-graphic-bar-java {
     background-color: rgba(93, 214, 214, 0.8);
     border-radius: 2px;
     height: 4px;
-    width: 40%;
+    width: 30%;
 }
 
-.abilities-section-card-graphic-bar-cplusplus {
+.abilities-section-card-graphic-bar-typescript {
     background-color: rgba(93, 214, 214, 0.8);
     border-radius: 2px;
     height: 4px;
-    width: 30%;
+    width: 60%;
 }
 
 .abilities-section-card-graphic-bar-design {
@@ -610,11 +690,14 @@
 }
 
 .qualifications-section-title p {
+    justify-content: center;
     color: rgb(102, 102, 102);
+    display: flex;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 12px;
+    text-align: center;
 }
 
 .qualification__container {
@@ -706,14 +789,17 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 12px;
+    text-align: center;
 }
 
 .projects-section-container-content {
+    align-items: center;
     display: flex;
     flex-flow: column;
     height: 80%;
     justify-content: space-around;
-    margin-top: 4em;
+    margin: auto;
+    margin-top: 2em;
     width: 80%;
     opacity: 0;
 }
@@ -752,6 +838,21 @@
 }
 
 .projects-section-content-card-complexorj img {
+    border-radius: 12px;
+    width: 60%;
+    height: 100%;
+}
+
+.projects-section-content-card-blogsapi {
+    align-items: center;
+    display: none;
+    height: 100%;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+}
+
+.projects-section-content-card-blogsapi img {
     border-radius: 12px;
     width: 60%;
     height: 100%;
@@ -796,22 +897,18 @@
     width: 100%;
 }
 
-.thumb-content {
-    display: flex;
-    height: 100%;
+.image-div-projects-section-card-recipe {
+    align-items: center;
     justify-content: center;
-    width: 60%;
+    border-radius: 12px;
+    display: flex;
+    width: 75%;
+    height: 100%;
 }
 
-.thumb-content2 {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 74.5%;
-}
-
-.thumb-content2 img {
-    width: 420px;
+.image-div-projects-section-card-recipe img {
+    border-radius: 8px;
+    width: 160px;
 }
 
 .projects-section-content-card-codeatoms {
@@ -859,6 +956,18 @@
 .projects-section-text-content p {
     text-align: justify;
     width: 80%;
+}
+
+.thumb-content2 {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 74.5%;
+}
+
+.thumb-content2 img {
+    width: 60%;
+    height: 100%;
 }
 
 .button-function a {
@@ -939,17 +1048,19 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 12px;
+    text-align: center;
 }
 
 .contact-section-container-content {
     align-self: flex-start;
     display: flex;
-    flex-flow: column;
-    height: 9em;
+    flex-flow: column wrap;
+    height: auto;
     justify-content: space-evenly;
     margin: auto;
     margin-top: 8em;
     opacity: 0;
+    padding: 1em;
     width: 64%;
 }
 
@@ -967,7 +1078,8 @@
     display: flex;
     flex-flow: row;
     height: 16em;
-    justify-content: space-evenly;
+    margin: auto;
+    justify-content: center;
     width: 100%;
 }
 
@@ -975,24 +1087,671 @@
     color: rgb(32, 32, 32);
     font-family: Poppins;
     font-size: 16px;
+    margin: auto;
     margin-top: 3em;
     width: 60%;
+    text-align: center;
 }
 
-.footer-content-image {
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    margin-top: 3em;
+@media only screen and (max-width: 1300px) {
+    #projects-section {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        font-family: Poppins;
+        height: 56em;
+        margin: auto;
+        width: 100%;
+    }
 }
 
-.footer-content-image p {
-    color: rgb(32, 32, 32);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 500;
+@media only screen and (max-width: 1050px) {
+    #home-section {
+        width: 100%;
+    }
+
+    .abilities-section-card {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 34em;
+        justify-content: center;
+        margin: 2em;
+        width: 35%;
+    }
+
+    #home-section-buttons p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    #home-section-scroll-down {
+        align-items: center;
+        bottom: 30%;
+        display: flex;
+        left: 10%;
+        position: absolute;
+        transition: 0.8s;
+    }
+
+    #abilities-section-title-content {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    #abilities-section-cards-content {
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        justify-content: space-evenly;
+        margin-top: 2em;
+        opacity: 0;
+        width: 100%;
+    }
+
+    #abilities-section {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: auto;
+        justify-content: space-around;
+        margin: auto;
+        margin-bottom: 2em;
+        width: 65%;
+    }
+
+    #abilities-section {
+        height: 75em;
+    }
+
+    .abilities-section-card-thumb-front {
+        background-image: url('./imagens/frontend.png');
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        height: 6em;
+        width: 10em;
+    }
+
+    .abilities-section-card-thumb-design {
+        background-image: url('./imagens/design-image.png');
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        height: 8em;
+        width: 10em;
+    }
+
+    .abilities-section-card-thumb-back {
+        background-image: url('./imagens/backend.png');
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        height: 7em;
+        width: 9em;
+    }
+
+    .abilities-section-card-graphic-bar-border {
+        border: 2px solid rgba(55, 156, 156, 0.8);
+        border-radius: 2px;
+        margin: auto;
+        width: 12em !important;
+    }
 }
 
-.footer-content-image img {
-    width: 400px;
+@media only screen and (max-width: 940px) {
+    #minha-foto {
+        border-radius: 20%;
+        height: 140px;
+        width: 140px;
+    }
+
+    #home-section-text-content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        line-height: 1.2em;
+        margin-bottom: 6px;
+        width: 70%;
+    }
+
+    .contact-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+    }
+
+    .projects-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+    }
+
+    #home-section-text-content h3 {
+        color: rgb(80, 80, 80);
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    #home-section-text-content p {
+        color: rgb(80, 80, 80);
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin-bottom: 6px;
+        width: 80%;
+    }
+    
+    #home-section-buttons {
+        align-items: center;
+        display: flex;
+        height: 4em;
+        justify-content: space-evenly;
+        width: 35%;
+    }
+    
+    #home-section-buttons p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 17px;
+    }
+    
+    .button-function {
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        background-color: rgba(93, 214, 214, 0.8);
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px 8px 14px;
+        transition: 0.2s;
+    }
+
+    #abilities-section-title-content h1 {
+        font-size: 30px;
+    }
+
+    .qualifications-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+    }
+
+    .qualification__tabs {
+        font-size: 16px;
+        margin-bottom: 4em;
+    }
+
+    .qualification__content {
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        justify-content: space-between;
+        width: 34em;
+    }
+
+    .qualification__content2 {
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        justify-content: space-between;
+        width: 34em;
+    }
+
+    .qualification__subtitle2 {
+        align-items: center;
+        display: flex;
+        flex: row wrap;
+        justify-content: center;
+        width: 10em;
+    }
+
+    .qualification__title2 {
+        width: 12em;
+    }
+
+    .projects-section-content-card-recipe-app {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-recipe-app img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-frontend-online-store {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-frontend-online-store img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-trybewallet {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-trybewallet img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-trivia {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-trivia img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-codeatoms {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-codeatoms img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-complexorj {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-complexorj img {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-content-card-nuis {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .projects-section-content-card-nuis img {
+        margin-bottom: 1em;
+    }
+
+    #projects-section {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        font-family: Poppins;
+        height: auto;
+        margin: auto;
+        width: 75%;
+    }
+
+    .projects-section-text-content {
+        width: 70%;
+    }
+
+    .projects-section-text-content-div h4 {
+        margin-bottom: 1em;
+    }
+
+    .projects-section-container-content {
+        justify-content: space-between;
+        height: auto;
+        margin-top: 4em;
+    }
+
+    .abilities-section-card {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 24.2em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 60%;
+    }
+
+    .abilities-section-card-backend {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 24.2em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 60%;
+    }
+
+    .abilities-section-card-design {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 24.2em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 60%;
+    }
+
+    .abilities-section-card-graphic-bar-border {
+        border: 2px solid rgba(55, 156, 156, 0.8);
+        border-radius: 2px;
+        margin: auto;
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .header-content {
+        align-items: center;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        justify-content: center;
+        margin: auto;
+        width: 80em;
+    }
+
+    #nav-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    #projects-section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    #home-section-buttons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 5em;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    #home-section-buttons p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    #minha-foto {
+        border-radius: 20%;
+        height: 120px;
+        width: 120px;
+    }
+
+    #home-section-text-content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        line-height: 1.2em;
+        margin-bottom: 6px;
+        width: 70%;
+    }
+
+    .projects-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+    }
+
+    .contact-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+    }
+
+    #home-section-text-content h3 {
+        color: rgb(80, 80, 80);
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    #home-section-text-content p {
+        color: rgb(80, 80, 80);
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        margin-bottom: 6px;
+        width: 80%;
+    }
+    
+    #home-section-buttons {
+        align-items: center;
+        display: flex;
+        height: 4em;
+        justify-content: space-evenly;
+        width: 35%;
+    }
+    
+    #home-section-buttons p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+    }
+
+    #home-section {
+        margin-top: 10em;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #home-section-text-content p {
+        position: absolute;
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+    }
+
+    #home-section-buttons {
+        align-items: center;
+        display: flex;
+        height: 4em;
+        justify-content: space-evenly;
+        width: 45%;
+    }
+    
+    #home-section-buttons p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+    }
+
+    .projects-section-container-content {
+        width: 100%;
+    }
+
+    .projects-section-text-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #minha-foto {
+        position: absolute;
+        display: none;
+    }
+
+    #home-section-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #home-section-text-content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 1.2em;
+        margin-bottom: 6px;
+        width: 100%;
+    }
+
+    .contact-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+    }
+
+    #home-section-scroll-down {
+        display: none;
+    }
+
+    #qualifications-section {
+        margin-top: 4em;
+    }
+
+    #nav-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    #home-section-text-content {
+        width: 100%;
+    }
+
+    .qualification__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .qualification__content2 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0;
+        width: 100%;
+    }
+
+    #qualifications-section {
+        height: 70em;
+    }
+
+    .divisor-bar {
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        height: 10em;
+        width: 2px;
+        transform: rotate(90deg);
+    }
+    
+    .divisor-bar2 {
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        height: 10em;
+        width: 2px;
+        transform: rotate(90deg);
+    }
+
+    .qualifications-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+    }
+
+    #abilities-section-title-content h1 {
+        font-size: 24px;
+    }
+
+    .projects-section-title h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .abilities-section-card {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 30em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 90%;
+    }
+
+    .abilities-section-card-backend {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 30em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 90%;
+    }
+
+    .abilities-section-card-design {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        height: 24.2em;
+        justify-content: space-between;
+        margin: 2em;
+        width: 90%;
+    }
+
+    .right-arrow {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .right-arrow-2 {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .left-arrow {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .left-arrow-2 {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .projects-section-content-card-recipe-app img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-frontend-online-store img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-trybewallet img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-trivia img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-codeatoms img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-complexorj img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    .projects-section-content-card-nuis img {
+        margin-bottom: 1em;
+        width: 10em;
+    }
+
+    #header {
+        display: none;
+        position: absolute;
+    }
 }

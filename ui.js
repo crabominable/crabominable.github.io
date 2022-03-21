@@ -2,25 +2,33 @@
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 950) {
-    $('#abilities-section-cards-content').css({ opacity: "1", transition: "1s" });
+    $('#abilities-section-cards-content').css({ opacity: "1", transition: "1.5s" });
     $('.abilities-section-card-graphic-bar-border').css({ opacity: "1", transition: "1.5s", width: "100%" })
   }
   var x = $(this).scrollTop();
   if (x > 100) {
-    $('.qualification__container').css({ opacity: "1", transition: "1s" });
+    $('.qualification__container').css({ opacity: "1", transition: "1.5s" });
   }
   var z = $(this).scrollTop();
   if (z > 400) {
-    $('.qualification__content2').css({ opacity: "1", transition: "1s" });
+    $('.qualification__content2').css({ opacity: "1", transition: "1.5s" });
   }
   var k = $(this).scrollTop();
   if (k > 1600) {
-    $('.projects-section-container-content').css({ opacity: "1", transition: "1s" });
+    $('.projects-section-container-content').css({ opacity: "1", transition: "1.5s" });
   }
   var z = $(this).scrollTop();
   if (z > 2400) {
-    $('.contact-section-container-content').css({ opacity: "1", transition: "1s" });
+    $('.contact-section-container-content').css({ opacity: "1", transition: "1.5s" });
   }
+});
+$('#menu-bars').click(function() {
+  $('#menu-bars').fadeOut('fast');
+  $('#header-mobile').fadeIn('fast');
+});
+$('#menu-bars-header').click(function() {
+  $('#header-mobile').fadeOut('fast');
+  $('#menu-bars').fadeIn('fast');
 });
 // Site desenvolvido e compilado por Lucas Pinheiro > https://github.com/crabominable, https://www.linkedin.com/in/lucas-pinheiro-alberdanha/
 $('#code-atoms').click(function() {
@@ -73,9 +81,14 @@ $('.left-arrow-2').click(function() {
       $('.projects-section-content-card-codeatoms').css({display: 'flex'});
     });
   }
+  if ($('.projects-section-content-card-blogsapi').css("display") === 'flex') {
+    $('.projects-section-content-card-blogsapi').fadeOut('fast', function() {
+      $('.projects-section-content-card-complexorj').css({display: 'flex'});
+    });
+  }
   if ($('.projects-section-content-card-nuis').css("display") === 'flex') {
     $('.projects-section-content-card-nuis').fadeOut('fast', function() {
-      $('.projects-section-content-card-complexorj').css({display: 'flex'});
+      $('.projects-section-content-card-blogsapi').css({display: 'flex'});
     });
   }
 });
@@ -88,6 +101,11 @@ $('.right-arrow-2').click(function() {
   }
   if ($('.projects-section-content-card-complexorj').css("display") === 'flex') {
     $('.projects-section-content-card-complexorj').fadeOut('fast', function() {
+      $('.projects-section-content-card-blogsapi').css({display: 'flex'});
+    });
+  }
+  if ($('.projects-section-content-card-blogsapi').css("display") === 'flex') {
+    $('.projects-section-content-card-blogsapi').fadeOut('fast', function() {
       $('.projects-section-content-card-nuis').css({display: 'flex'});
     });
   }
